@@ -6,14 +6,15 @@ import $ from 'jquery';
 
 export const Login = () => {
 
-const handleLogin = async () => {
-    var  username = $("#username").val();
-    var  password = $("#password").val();
+  const handleLogin = async () => {
+    var username = $("#username").val();
+    var password = $("#password").val();
+  
     if (username === '' || password === '') {
       window.alert('Input is required');
       return;
     }
-
+  
     try {
       const response = await fetch('http://localhost:3000/api/users/login', {
         method: 'POST',
@@ -22,24 +23,25 @@ const handleLogin = async () => {
         },
         body: JSON.stringify({ UserName: username, Password: password }),
       });
-
+  
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.text();
         localStorage.setItem('token', data.token);
-        $("#Login").css("display", "none");
-        $("#Signup").css("display", "none");
-        $("#Logout").css("display", "contents");
+        $("#Login").addClass("hidden");
+        $("#Signup").addClass("hidden");
+        $("#Logout").removeClass("hidden");
       } else {
+        const errorMessage = await response.text(); 
+        console.error('Login failed. Server error:', errorMessage);
         window.alert('Login failed. Please check your credentials.');
       }
     } catch (error) {
       console.error('Error during login:', error);
     }
   
-  $("#username").val(null);
-  $("#password").val(null);
+    $("#username").val(null);
+    $("#password").val(null);
   };
-
   return (
     <>
   <div>

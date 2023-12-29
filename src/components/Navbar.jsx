@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom';
 import $ from 'jquery';
 
 const Navbar = () => {
+$(window).on("load", function() {
+        $("#Logout").addClass("hidden");
+});
 const [isNavOpen, setNavOpen] = useState(false);
 
 const toggleNav = () => {
@@ -11,9 +14,9 @@ const toggleNav = () => {
 
 function Logout(){
     localStorage.setItem('token', "");
-    $("#Login").css("display", "contents");
-    $("#Signup").css("display", "contents");
-    $("#Logout").css("display", "none");
+    $("#Login").removeClass("hidden");
+    $("#Signup").removeClass("hidden");
+    $("#Logout").addClass("hidden");
   
 }
 
