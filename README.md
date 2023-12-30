@@ -68,3 +68,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+How to access Backend for this code :
+To access the backend for this code : https://github.com/A81rehman/Project-BackEnd.git
+First run the backend on the 3000 port then run the frontend code to access the backend using frontend
+
