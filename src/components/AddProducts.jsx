@@ -3,8 +3,23 @@ import $ from 'jquery';
 import { Footer } from './Footer';
 import  myimg from '../assets/davide-cantelli-jpkfc5_d-DI-unsplash.jpg';
 import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const AddProducts = () => {
+
+const navigate = useNavigate();
+useEffect(() => {
+    const isLoggedIn = localStorage.getItem('token') !== "";
+    if (isLoggedIn === true) {
+        console.log('Logged in');
+    }
+    else {
+    console.log('Logged out');
+    navigate(`/Login`);
+    }
+}, [navigate]);
+    
     function addproduct(){
         var Image = $("#URL").val();
         var Name = $("#Name").val();
@@ -21,7 +36,12 @@ export const AddProducts = () => {
             method: "POST",
             data:{Name,Category,Price,Description,Ingredients,Image},
             success: function(res){
-                console.log(res);
+                console.log(res.error);
+                if (res.status) {
+                    console.log("Product added successfully");
+                } else {
+                    console.error("Error adding product:", res.error);
+                }
             }
         })
         $("#URL").val(null);

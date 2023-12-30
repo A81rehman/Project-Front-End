@@ -1,12 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import $ from 'jquery';
 import { Footer } from './Footer';
 import  myimg from '../assets/davide-cantelli-jpkfc5_d-DI-unsplash.jpg';
+import {useNavigate} from 'react-router-dom';
 
 
 export const EditProducts = (props) => {
     const { id } = useParams();
+
+    const navigate = useNavigate();
+useEffect(() => {
+    const isLoggedIn = localStorage.getItem('token') !== "";
+    if (isLoggedIn === true) {
+        console.log('Logged in');
+    }
+    else {
+    console.log('Logged out');
+    navigate(`/Login`);
+    }
+}, [navigate]);
 
 useEffect(() => {
 $.get(`http://localhost:3000/api/products/${id}`, function (res) {

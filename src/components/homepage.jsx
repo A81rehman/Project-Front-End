@@ -60,20 +60,20 @@ export const Homepage = () => {
         <div className="mySlides fade" id='caption'>
           <div className="numbertext">1 / 3</div>
           <img src={myimg} style={{ width: '100vw', height: '100vh' }} alt="Nature" />
-          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Savor the UrbanPlates Experience: Where Culinary Passion Meets Every Plate!Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p><Link to='/Contactus' className='text3'>Contact Us</Link></h1>
+          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Savor the UrbanPlates Experience: Where Culinary Passion Meets Every Plate!Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p></h1>
           
         </div>
 
         <div className="mySlides fade">
           <div className="numbertext">2 / 3</div>
           <img src={myimg1} style={{ width: '100vw', height: '100vh' }} alt="Snow" />
-          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Discover a Symphony of Flavors at UrbanPlates – Where Freshness is the Main Ingredient.Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p><Link to='/Contactus' className='text3'>Contact Us</Link></h1>
+          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Discover a Symphony of Flavors at UrbanPlates – Where Freshness is the Main Ingredient.Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p></h1>
         </div>
 
         <div className="mySlides fade">
           <div className="numbertext">3 / 3</div>
           <img src={myimg2} style={{ width: '100vw', height: '100vh' }} alt="Mountains" />
-          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Unleash the Power of Fresh, Locally-Sourced Ingredients – UrbanPlate, Your Culinary Haven.Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p><Link to='/Contactus' className='text3'>Contact Us</Link></h1>
+          <h1 className="text" style={{ color: 'white'}}>UrbanPlates Eatery<p className='text2'>Unleash the Power of Fresh, Locally-Sourced Ingredients – UrbanPlate, Your Culinary Haven.Innovative. Fresh. Unforgettable. Welcome to UrbanPlate Eatery.</p></h1>
         </div>
       </div>
 
