@@ -5,6 +5,7 @@ import $ from 'jquery';
 const Navbar = () => {
 $(window).on("load", function() {
         $("#Logout").addClass("hidden");
+         $("#token").addClass("hidden");
 });
 const [isNavOpen, setNavOpen] = useState(false);
 
