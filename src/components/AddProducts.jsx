@@ -27,6 +27,7 @@ useEffect(() => {
         var Ingredients = $("#PIngredients").val();
         var Price = $("#ProductPrice").val();
         var Description = $("#PDescription").val();
+        var token = $("#token").html();
         if(Image === "" || Name === "" || Price === "" || Category === "" || Ingredients === "" || Description === ""){
             window.alert("Input is required");
             return;
@@ -35,6 +36,9 @@ useEffect(() => {
             url:"http://localhost:3000/api/products",
             method: "POST",
             data:{Name,Category,Price,Description,Ingredients,Image},
+                        headers: {
+                'x-auth-token': token,
+                },
             success: function(res){
                 console.log(res.error);
                 if (res.status) {
