@@ -23,6 +23,7 @@ function Logout(){
 
 return (
     <nav className="bg-white border-gray-200 dark:bg-customGray" id='navbar'>
+            <div id='token'></div>
     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <button
         onClick={toggleNav}
